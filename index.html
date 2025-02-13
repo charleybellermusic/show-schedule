@@ -1,126 +1,209 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upcoming Shows</title>
+    <title>Charley Beller Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #c5b6a0;
+            color: #333;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
+
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin-bottom: 16px;
         }
-        th {
-            background-color: #f8f9fa;
+
+        .profile-name {
+            font-size: 24px;
+            margin-bottom: 8px;
         }
+
+        .profile-bio {
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .show-card {
+            background: white;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card-main {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .card-left {
+            flex-grow: 1;
+        }
+
+        .card-right {
+            display: flex;
+            align-items: center;  /* Options {center, stretch} */
+            justify-content: flex-end;
+            gap: 12px;
+            min-width: 200px;
+        }
+        
+        .date-location {
+            text-align: right;
+            flex-grow: 1;
+            width: 140px;  /* Fixed width for consistent alignment */
+
+        }
+
+        .venue {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
         .group {
             color: #666;
-            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 4px;
         }
-        .venue {
-            font-weight: 500;
+
+        .show-date, .location {
+            line-height: 1.2;
+            margin: 0;
         }
+
         .ticket-link {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 4px 12px;
-            background-color: #4CAF50;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            height: 36px;  /* Match text height */
+            background-color: #037a5b;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 14px;
         }
+
         .ticket-link:hover {
-            background-color: #45a049;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        @media (max-width: 600px) {
-            th, td {
-                padding: 8px;
-                font-size: 14px;
-            }
+            background-color: #025d45;
         }
     </style>
 </head>
 <body>
-    <h1>Shows</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Event</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Jan 18, 2025</td>
-                <td>
+    <div class="profile">
+        <img src="assets/guitar_2.jpg" alt="Profile" class="profile-img">
+        <h1 class="profile-name">Charley Beller Music</h1>
+        <p class="profile-bio">
+            Folk musician based in Baltimore</br>
+            Guitar, Banjo, Irish Flute</p>
+    </div>
+
+<div class="shows">
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
                     <div class="venue">Four Hour Day Lutherie</div>
                     <div class="group">with Cúlra</div>
+                </div>
+                <div class="card-right">
                     <a href="https://www.facebook.com/events/1610027859592809/" class="ticket-link">Details</a>
-                </td>
-                <td>Baltimore, MD</td>
-            </tr>
-            <tr>
-                <td>Feb 1, 2025</td>
-                <td>
+                    <div class="date-location">
+                        <div class="show-date">January 18, 2025</div>
+                        <div class="location">Baltimore, MD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
                     <div class="venue">Backwater Books</div>
                     <div class="group">with Cúlra</div>
+                </div>
+                <div class="card-right">
                     <a href="https://backwaterbooks.com/event/2025-02-01/backwater-sessions-culra" class="ticket-link">Details</a>
-                </td>
-                <td>Ellicot City, MD</td>
-            </tr>
-            <tr>
-                <td>Feb 7, 2025</td>
-                <td>
-                    <div class="venue">Contra Dance at the Spanish Ballroom</div>
+                    <div class="date-location">
+                        <div class="show-date">February 1, 2025</div>
+                        <div class="location">Ellicot City, MD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
+                    <div class="venue">Contra Dance at Glen Echo Park</div>
                     <div class="group">with Meg Wobus, Rachel Eddy, and Ken Kolodner</div>
+                </div>
+                <div class="card-right">
                     <a href="https://www.eventbrite.com/e/jordan-kammeyer-calling-to-the-music-of-beller-wobus-kolodner-eddy-tickets-1130010374449" class="ticket-link">Details</a>
-                </td>
-                <td>Glen Echo Park, MD</td>
-            </tr>
-            <tr>
-                <td>March 14, 2025</td>
-                <td>
+                    <div class="date-location">
+                        <div class="show-date">February 7, 2025</div>
+                        <div class="location">Glen Echo, MD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
                     <div class="venue">Earp's Ordinary</div>
-                    <div class="group">with Cúlra opening for the Kilmaine Saints </div>
+                    <div class="group">with Cúlra opening for the Kilmaine Saints</div>
+                </div>
+                <div class="card-right">
                     <a href="https://aftontickets.com/event/buyticket/nvjqo80zxo" class="ticket-link">Details</a>
-                </td>
-                <td>Fairfax, VA</td>
-            </tr>
-            <tr>
-                <td>March 17, 2025</td>
-                <td>
+                    <div class="date-location">
+                        <div class="show-date">March 14, 2025</div>
+                        <div class="location">Fairfax, VA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
                     <div class="venue">Brightview</div>
                     <div class="group">with Ken Kolodner</div>
-                </td>
-                <td>Perry Hall, MD</td>
-            </tr>
-            <tr>
-                <td>March 26, 2025</td>
-                <td>
+                </div>
+                <div class="card-right">
+                    <div class="date-location">
+                        <div class="show-date">March 17, 2025</div>
+                        <div class="location">Perry Hall, MD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-card">
+            <div class="card-main">
+                <div class="card-left">
                     <div class="venue">Contra Dance at Lovely Lane</div>
                     <div class="group">with Contranella</div>
-                </td>
-                <td>Baltimore, MD</td>
-            </tr>
-
-        </tbody>
-    </table>
+                </div>
+                <div class="card-right">
+                    <div class="date-location">
+                        <div class="show-date">March 26, 2025</div>
+                        <div class="location">Baltimore, MD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
